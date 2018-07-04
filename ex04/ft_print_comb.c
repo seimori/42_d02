@@ -6,11 +6,18 @@
 /*   By: imorimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 17:23:54 by imorimot          #+#    #+#             */
-/*   Updated: 2018/07/04 17:47:25 by imorimot         ###   ########.fr       */
+/*   Updated: 2018/07/04 23:03:56 by imorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_putchar(char c);
+
+void	ft_print_three(char c, char d, char e)
+{
+	ft_putchar(c);
+	ft_putchar(d);
+	ft_putchar(e);
+}
 
 void	ft_print_comb(void)
 {
@@ -19,25 +26,24 @@ void	ft_print_comb(void)
 	char k;
 
 	i = '0';
-	j = '0';
-	k = '0';
 	while (i <= '7')
 	{
+		j = i + 1;
 		while (j <= '8')
 		{
+			k = j + 1;
 			while (k <= '9')
 			{
-				ft_putchar(i);
-				ft_putchar(j);
-				ft_putchar(k);
-				ft_putchar(',');
-				ft_putchar(' ');
+				if (k != '2')
+				{
+					ft_putchar(',');
+					ft_putchar(' ');
+				}
+				ft_print_three(i, j, k);
 				k++;
 			}
 			j++;
-			k = '0';
 		}
 		i++;
-		j = '0';
 	}
 }
