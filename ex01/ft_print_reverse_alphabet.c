@@ -6,17 +6,13 @@
 /*   By: imorimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 14:05:05 by imorimot          #+#    #+#             */
-/*   Updated: 2018/07/04 15:48:24 by imorimot         ###   ########.fr       */
+/*   Updated: 2018/07/04 16:25:19 by imorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return (0);
-}
+int		ft_putchar(char c);
 
 void	ft_print_reverse_alphabet(void)
 {
@@ -28,11 +24,4 @@ void	ft_print_reverse_alphabet(void)
 		ft_putchar(c);
 		c--;
 	}
-}
-
-int		main(void)
-{
-	ft_print_reverse_alphabet();
-	ft_putchar('\n');
-	return (0);
 }
