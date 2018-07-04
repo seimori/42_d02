@@ -6,7 +6,7 @@
 /*   By: imorimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 14:46:37 by imorimot          #+#    #+#             */
-/*   Updated: 2018/07/04 14:59:12 by imorimot         ###   ########.fr       */
+/*   Updated: 2018/07/04 15:50:16 by imorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,17 @@ int		ft_putchar(char c)
 
 void	ft_print_numbers(void)
 {
-	char c = '0';
-	while(c <= '9')
+	char c;
+
+	c = '0';
+	while (c <= '9')
 	{
 		ft_putchar(c);
 		c++;
 	}
 }
 
-int		main()
+int		main(void)
 {
 	ft_print_numbers();
 	ft_putchar('\n');
