@@ -6,7 +6,7 @@
 /*   By: imorimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 11:12:16 by imorimot          #+#    #+#             */
-/*   Updated: 2018/07/04 11:53:23 by imorimot         ###   ########.fr       */
+/*   Updated: 2018/07/04 14:01:54 by imorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,19 @@ int		ft_putchar(char c)
 	return (0);
 }
 
+void	ft_print_alphabet(void)
+{
+	char c = 'a';
+	while(c <= 'z')
+	{
+		ft_putchar(c);
+		c++;
+	}
+}
+
 int		main()
 {
-	ft_putchar('a'+1);
+	ft_print_alphabet();
 	ft_putchar('\n');
 	return (0);
 }
