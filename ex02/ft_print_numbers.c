@@ -6,17 +6,13 @@
 /*   By: imorimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 14:46:37 by imorimot          #+#    #+#             */
-/*   Updated: 2018/07/04 15:50:16 by imorimot         ###   ########.fr       */
+/*   Updated: 2018/07/04 16:29:12 by imorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int		ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return (0);
-}
+int		ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {
@@ -28,11 +24,4 @@ void	ft_print_numbers(void)
 		ft_putchar(c);
 		c++;
 	}
-}
-
-int		main(void)
-{
-	ft_print_numbers();
-	ft_putchar('\n');
-	return (0);
 }
