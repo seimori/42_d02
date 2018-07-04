@@ -6,8 +6,21 @@
 /*   By: imorimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 11:12:16 by imorimot          #+#    #+#             */
-/*   Updated: 2018/07/04 11:12:24 by imorimot         ###   ########.fr       */
+/*   Updated: 2018/07/04 11:53:23 by imorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 
+int		ft_putchar(char c)
+{
+	write(1, &c, 1);
+	return (0);
+}
+
+int		main()
+{
+	ft_putchar('a'+1);
+	ft_putchar('\n');
+	return (0);
+}
