@@ -6,7 +6,7 @@
 /*   By: imorimot <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 23:07:08 by imorimot          #+#    #+#             */
-/*   Updated: 2018/07/04 23:41:02 by imorimot         ###   ########.fr       */
+/*   Updated: 2018/07/05 10:34:56 by imorimot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@ int		ft_putchar(char c);
 
 void	ft_print_comb2(void)
 {
-	int i;
-	int j;
-	int k;
-	int l;
+	char i;
+	char j;
+	char k;
+	char l;
 
 	i = '0';
 	while (i <= '9')
@@ -25,10 +25,10 @@ void	ft_print_comb2(void)
 		j = '0';
 		while (j <= '8')
 		{
-			k = '0';
+			k = i;
+			l = j + 1;
 			while (k <= '9')
 			{
-				l = '0';
 				while (l <= '9')
 				{
 					ft_putchar(i);
@@ -36,10 +36,14 @@ void	ft_print_comb2(void)
 					ft_putchar(' ');
 					ft_putchar(k);
 					ft_putchar(l);
-					ft_putchar(',');
-					ft_putchar(' ');
+					if (i != '9' || j != '8')
+					{
+						ft_putchar(',');
+						ft_putchar(' ');
+					}
 					l++;
 				}
+				l = '0';
 				k++;
 			}
 			j++;
